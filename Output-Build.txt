@@ -1,0 +1,7 @@
+﻿1>------ Build started: Project: A2MS4, Configuration: Debug Win32 ------
+1>contactHelpers.c
+1>\\Mac\Home\Desktop\New Folder\IPC144\A2MS4\contactHelpers.c(475,54): warning C4047: '=': 'int *' differs in levels of indirection from 'int'
+1>\\Mac\Home\Desktop\New Folder\IPC144\A2MS4\contactHelpers.c(477,54): warning C4047: '=': 'int' differs in levels of indirection from 'int *'
+1>A2MS4.vcxproj -> \\Mac\Home\Desktop\New Folder\IPC144\A2MS4\Debug\A2MS4.exe
+1>Done building project "A2MS4.vcxproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

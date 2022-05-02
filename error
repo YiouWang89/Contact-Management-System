@@ -1,0 +1,111 @@
+In file included from contactHelpers.c:22:
+./contactHelpers.h:62:35: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+int findContactIndex(const struct Contact contacts[], int size, const char cellNum[]);
+                                  ^
+./contactHelpers.h:62:51: error: array has incomplete element type 'const struct Contact'
+int findContactIndex(const struct Contact contacts[], int size, const char cellNum[]);
+                                                  ^
+./contactHelpers.h:62:35: note: forward declaration of 'struct Contact'
+int findContactIndex(const struct Contact contacts[], int size, const char cellNum[]);
+                                  ^
+./contactHelpers.h:75:34: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+void displayContact(const struct Contact* contact);
+                                 ^
+./contactHelpers.h:79:35: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+void displayContacts(const struct Contact contacts[], int size);
+                                  ^
+./contactHelpers.h:79:51: error: array has incomplete element type 'const struct Contact'
+void displayContacts(const struct Contact contacts[], int size);
+                                                  ^
+./contactHelpers.h:79:35: note: forward declaration of 'struct Contact'
+void displayContacts(const struct Contact contacts[], int size);
+                                  ^
+./contactHelpers.h:83:34: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+void searchContacts(const struct Contact contacts[], int size);
+                                 ^
+./contactHelpers.h:83:50: error: array has incomplete element type 'const struct Contact'
+void searchContacts(const struct Contact contacts[], int size);
+                                                 ^
+./contactHelpers.h:83:34: note: forward declaration of 'struct Contact'
+void searchContacts(const struct Contact contacts[], int size);
+                                 ^
+./contactHelpers.h:87:24: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+void addContact(struct Contact contacts[], int size);
+                       ^
+./contactHelpers.h:87:40: error: array has incomplete element type 'struct Contact'
+void addContact(struct Contact contacts[], int size);
+                                       ^
+./contactHelpers.h:87:24: note: forward declaration of 'struct Contact'
+void addContact(struct Contact contacts[], int size);
+                       ^
+./contactHelpers.h:91:27: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+void updateContact(struct Contact contacts[], int size);
+                          ^
+./contactHelpers.h:91:43: error: array has incomplete element type 'struct Contact'
+void updateContact(struct Contact contacts[], int size);
+                                          ^
+./contactHelpers.h:91:27: note: forward declaration of 'struct Contact'
+void updateContact(struct Contact contacts[], int size);
+                          ^
+./contactHelpers.h:95:27: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+void deleteContact(struct Contact contacts[], int size);
+                          ^
+./contactHelpers.h:95:43: error: array has incomplete element type 'struct Contact'
+void deleteContact(struct Contact contacts[], int size);
+                                          ^
+./contactHelpers.h:95:27: note: forward declaration of 'struct Contact'
+void deleteContact(struct Contact contacts[], int size);
+                          ^
+./contactHelpers.h:99:26: warning: declaration of 'struct Contact' will not be visible outside of this function [-Wvisibility]
+void sortContacts(struct Contact contacts[], int size);
+                         ^
+./contactHelpers.h:99:42: error: array has incomplete element type 'struct Contact'
+void sortContacts(struct Contact contacts[], int size);
+                                         ^
+./contactHelpers.h:99:26: note: forward declaration of 'struct Contact'
+void sortContacts(struct Contact contacts[], int size);
+                         ^
+contactHelpers.c:198:44: warning: incompatible pointer to integer conversion passing 'char *' to parameter of type 'int' [-Wint-conversion]
+                if ((strlen(phoneNum) == 10) && (isdigit(phoneNum)))
+                                                         ^~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:237:13: note: passing argument to parameter '_c' here
+isdigit(int _c)
+            ^
+contactHelpers.c:246:6: error: conflicting types for 'displayContact'
+void displayContact(const struct Contact* contact)
+     ^
+./contactHelpers.h:75:6: note: previous declaration is here
+void displayContact(const struct Contact* contact);
+     ^
+contactHelpers.c:270:19: warning: incompatible pointer types passing 'const struct Contact *' to parameter of type 'const struct Contact *' [-Wincompatible-pointer-types]
+                        displayContact(& contacts[i]);
+                                       ^~~~~~~~~~~~~
+./contactHelpers.h:75:43: note: passing argument to parameter 'contact' here
+void displayContact(const struct Contact* contact);
+                                          ^
+contactHelpers.c:288:18: warning: incompatible pointer types passing 'const struct Contact *' to parameter of type 'const struct Contact *' [-Wincompatible-pointer-types]
+                displayContact(&contacts[found_index]);
+                               ^~~~~~~~~~~~~~~~~~~~~~
+./contactHelpers.h:75:43: note: passing argument to parameter 'contact' here
+void displayContact(const struct Contact* contact);
+                                          ^
+contactHelpers.c:310:14: warning: incompatible pointer types passing 'struct Contact **' to parameter of type 'struct Contact *'; remove & [-Wincompatible-pointer-types]
+                getContact(&contacts);
+                           ^~~~~~~~~
+./contacts.h:75:33: note: passing argument to parameter 'contact' here
+void getContact(struct Contact* contact);
+                                ^
+12 warnings and 8 errors generated.
+contacts.c:92:28: error: redefinition of 'home' with a different type: 'char [11]' vs 'int'
+    char cell[11] = { 0 }, home[11] = { 0 }, business[11] = { 0 };
+                           ^
+contacts.c:91:9: note: previous definition is here
+    int home, business;
+        ^
+contacts.c:92:46: error: redefinition of 'business' with a different type: 'char [11]' vs 'int'
+    char cell[11] = { 0 }, home[11] = { 0 }, business[11] = { 0 };
+                                             ^
+contacts.c:91:15: note: previous definition is here
+    int home, business;
+              ^
+2 errors generated.
